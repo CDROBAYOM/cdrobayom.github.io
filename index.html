@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Primary -->
+  <title>David Robayo — Software Architect &amp; Architecture Health Check | CDR Software Arch</title>
+  <meta name="description"
+    content="David Robayo (CDR) — Software Architect with 8+ years in the Colombian financial sector. Architecture Health Checks for CTOs and VPs in FinTech and regulated sectors across LATAM." />
+  <meta name="author" content="David Robayo" />
+  <link rel="canonical" href="https://cdrobayom.github.io/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cdrobayom.github.io/" />
+  <meta property="og:title" content="David Robayo — Software Architect | CDR Software Arch" />
+  <meta property="og:description"
+    content="Architecture Health Checks for FinTech CTOs and VPs in LATAM. 8+ years in Colombian financial sector." />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="es_CO" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="David Robayo — Software Architect | CDR Software Arch" />
+  <meta name="twitter:description" content="Architecture Health Checks for FinTech CTOs and VPs across LATAM." />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "name": "David Robayo",
+        "jobTitle": "Software Architect",
+        "description": "Software Architect with 8+ years in the Colombian financial sector. Specializing in Architecture Health Checks, hexagonal architecture, microservices, security (OIDC/PKCE, BFF), and multi-cloud (GCP/AWS).",
+        "url": "https://cdrobayom.github.io/",
+        "sameAs": [
+          "https://www.linkedin.com/in/carlos-david-r-075818157",
+          "https://github.com/cdrobayom"
+        ]
+      },
+      {
+        "@type": "ProfessionalService",
+        "name": "Architecture Health Check",
+        "provider": { "@type": "Person", "name": "David Robayo" },
+        "description": "A structured architectural diagnostic for FinTech and regulated sector engineering teams.",
+        "areaServed": "LATAM"        
+      }
+    ]
+  }
+  </script>
+
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Design System CSS (Fase 1) -->
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <!-- SVG favicon: hexagon + CDR initials -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpolygon points='16,2 28,9 28,23 16,30 4,23 4,9' fill='%230C0D0F' stroke='%23D4A346' stroke-width='1.5'/%3E%3Ctext x='16' y='21' font-family='monospace' font-size='9' font-weight='bold' fill='%23D4A346' text-anchor='middle'%3ECDR%3C/text%3E%3C/svg%3E" />
+</head>
+
+<body>
+
+  <!-- ======================================================
+       SKIP LINK — Accessibility
+  ======================================================= -->
+  <a href="#main-content" class="sr-only" id="skip-link">Skip to main content</a>
+
+  <!-- ======================================================
+       HEADER / NAV
+  ======================================================= -->
+  <header class="nav" id="nav" role="banner">
+    <div class="nav__inner">
+
+      <!-- Logo -->
+      <a href="#hero" class="nav__logo" aria-label="CDR Software Arch — Back to top">
+        <svg width="18" height="18" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <polygon points="16,2 28,9 28,23 16,30 4,23 4,9" fill="none" stroke="currentColor" stroke-width="1.5" />
+        </svg>
+        <span class="nav__logo-accent">CDR</span>
+        <span>Software Arch</span>
+      </a>
+
+      <!-- Main nav -->
+      <nav aria-label="Main navigation">
+        <ul class="nav__links" id="nav-links" role="list">
+          <li><a href="#services" class="nav__link" data-i18n="nav.services">Services</a></li>
+          <li><a href="#case-study" class="nav__link" data-i18n="nav.case">Case Study</a></li>
+          <li><a href="#stack" class="nav__link" data-i18n="nav.stack">Stack</a></li>
+          <li><a href="#contact" class="nav__link" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav__actions">
+        <!-- Language toggle -->
+        <div class="lang-toggle" role="group" aria-label="Language selector">
+          <button class="lang-toggle__btn is-active" id="lang-en" aria-pressed="true" data-lang-target="en">EN</button>
+          <button class="lang-toggle__btn" id="lang-es" aria-pressed="false" data-lang-target="es">ES</button>
+        </div>
+
+        <!-- Primary CTA (hidden on mobile — shown in hero) -->
+        <a href="#contact" class="btn btn--primary btn--sm nav__cta" id="nav-cta" data-i18n="nav.cta">Schedule a
+          Call</a>
+
+        <!-- Mobile hamburger -->
+        <button class="nav__hamburger" id="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false"
+          aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================
+       MAIN CONTENT
+  ======================================================= -->
+  <main id="main-content">
+
+    <!-- ==================================================
+         SECTION 1: HERO
+    =================================================== -->
+    <section id="hero" class="hero-section" aria-labelledby="hero-heading">
+      <div class="container hero-section__inner">
+
+        <!-- Eyebrow label -->
+        <p class="section-header__label animate-on-scroll" id="hero-label" data-i18n="hero.label">
+          Software Architect · LATAM FinTech
+        </p>
+
+        <!-- Main headline -->
+        <h1 class="hero-section__headline animate-on-scroll delay-1" id="hero-heading" data-i18n="hero.headline">
+          Your architecture either scales under pressure — or it doesn't.
+        </h1>
+
+        <!-- Sub-copy -->
+        <p class="hero-section__sub animate-on-scroll delay-2" data-i18n="hero.sub">
+          I help CTOs and VPs in FinTech and regulated sectors diagnose architectural risk before it becomes a
+          production crisis.
+        </p>
+
+        <!-- CTAs -->
+        <div class="hero-section__ctas animate-on-scroll delay-3">
+          <a href="#services" class="btn btn--primary btn--lg" id="hero-cta-primary" data-i18n="hero.cta.primary">
+            Book an Architecture Health Check
+          </a>
+          <a href="#case-study" class="btn btn--secondary btn--lg" id="hero-cta-secondary"
+            data-i18n="hero.cta.secondary">
+            See My Work
+          </a>
+        </div>
+
+        <!-- Credential badges -->
+        <div class="hero-section__badges animate-on-scroll delay-4">
+          <span class="badge badge--accent" data-i18n="hero.badges.gcp">GCP Professional Cloud Architect</span>
+          <span class="badge badge--surface" data-i18n="hero.badges.years">8+ Years · Financial Sector</span>
+          <span class="badge badge--surface" data-i18n="hero.badges.latam">LATAM · Colombia</span>
+        </div>
+
+        <!-- Decorative grid lines -->
+        <div class="hero-section__grid-deco" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         SECTION 2: SERVICES — Architecture Health Check
+    =================================================== -->
+    <section id="services" class="section" aria-labelledby="services-heading">
+      <div class="container">
+
+        <header class="section-header animate-on-scroll">
+          <p class="section-header__label" data-i18n="services.label">Service</p>
+          <h2 class="section-header__title" id="services-heading" data-i18n="services.title">Architecture Health Check
+          </h2>
+          <p class="section-header__subtitle" data-i18n="services.subtitle">
+            A structured diagnostic for teams that need clarity on where their architecture stands — and what to fix
+            first.
+          </p>
+        </header>
+
+        <div class="services-grid animate-on-scroll delay-1">
+
+          <!-- Scope -->
+          <div class="card card--elevated services-card" id="services-scope">
+            <div class="services-card__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.35-4.35" />
+              </svg>
+            </div>
+            <h3 class="services-card__title" data-i18n="services.scope.title">Scope</h3>
+            <ul class="services-card__list" role="list" id="services-scope-list">
+              <li>Structural risk analysis: coupling, modularity and dependency boundaries</li>
+              <li>Security posture review: identity flows (OIDC/PKCE, BFF), data exposure and compliance readiness</li>
+              <li>Operational fitness: CI/CD pipelines, observability gaps and deployment resilience</li>
+            </ul>
+          </div>
+
+          <!-- Deliverables -->
+          <div class="card card--elevated services-card" id="services-deliverables">
+            <div class="services-card__icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="16" y1="13" x2="8" y2="13" />
+                <line x1="16" y1="17" x2="8" y2="17" />
+                <polyline points="10 9 9 9 8 9" />
+              </svg>
+            </div>
+            <h3 class="services-card__title" data-i18n="services.deliverables.title">Deliverables</h3>
+            <ul class="services-card__list" role="list" id="services-deliverables-list">
+              <li>Executive Deck — risk summary for non-technical stakeholders</li>
+              <li>Technical Report — detailed findings with severity ratings and ADRs</li>
+              <li>Remediation Roadmap — prioritized action plan with effort estimates</li>
+            </ul>
+          </div>
+
+          <!-- Duration + Price + CTA -->
+          <div class="card card--accent services-card services-card--cta" id="services-cta-card">
+            <div class="services-meta">
+              <div class="services-meta__item">
+                <span class="services-meta__label font-mono text-xs uppercase ls-widest text-muted"
+                  data-i18n="services.duration.label">Engagement</span>
+                <span class="services-meta__value" data-i18n="services.duration.value">2 – 3 weeks</span>
+              </div>
+            </div>
+
+            <a href="#contact" class="btn btn--primary" id="services-cta-btn" data-i18n="services.cta">
+              Schedule an Exploratory Session
+            </a>
+
+            <p class="services-nda text-muted text-xs" data-i18n="services.note">
+              NDA available before sharing any system details.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================
+         SECTION 3: FEATURED CASE STUDY — ops-report-ai
+    =================================================== -->
+    <section id="case-study" class="section section--alt" aria-labelledby="case-heading">
+      <div class="container">
+
+        <header class="section-header animate-on-scroll">
+          <p class="section-header__label" data-i18n="case.label">Featured Case Study</p>
+          <h2 class="section-header__title" id="case-heading" data-i18n="case.title">ops-report-ai</h2>
+          <p class="section-header__subtitle" data-i18n="case.client">CoopNorte · Cooperative Financial Institution
+            (Fictitious)</p>
+          <p class="section-header__subtitle" style="margin-top: var(--space-2);" data-i18n="case.tagline">
+            Modernizing a compliance reporting system under strict regulatory constraints.
+          </p>
+        </header>
+
+        <!-- Context + Challenges row -->
+        <div class="grid grid--2 animate-on-scroll delay-1" style="margin-bottom: var(--space-8);">
+
+          <div class="card">
+            <h3 class="case-card__title" data-i18n="case.context.title">Business Context</h3>
+            <p data-i18n="case.context.body" style="max-width: 100%;">
+              CoopNorte processed end-of-day financial reports through a monolithic batch system prone to failures under
+              peak load. Regulatory audits required tamper-proof audit trails and role-based access to sensitive
+              reporting data — capabilities the existing architecture couldn't provide.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 class="case-card__title" data-i18n="case.challenge.title">Architecture Challenges</h3>
+            <ul class="case-list" role="list" id="case-challenges-list">
+              <li>Tight coupling between report generation, storage and delivery layers</li>
+              <li>No identity boundaries — any internal service could access any report</li>
+              <li>Missing fitness functions: no automated checks for latency SLOs or coupling regression</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- C4 Diagram -->
+        <div class="card animate-on-scroll delay-2" style="margin-bottom: var(--space-8);" id="case-c4">
+          <h3 class="case-card__title" data-i18n="case.c4.title">C4 Container Diagram</h3>
+          <div class="c4-diagram" id="c4-mermaid">
+            <!-- Mermaid C4 diagram -->
+            <pre class="mermaid">
+C4Container
+  title ops-report-ai — Container Diagram (CoopNorte)
+
+  Person(auditor, "Compliance Auditor", "Reviews financial reports and audit trails via web portal")
+  Person(officer, "Back-Office Officer", "Generates and downloads compliance reports")
+
+  System_Boundary(ops, "ops-report-ai System") {
+    Container(web_bff, "Web BFF", "Node.js / Express", "Aggregates data for web portal. Manages OIDC session with HttpOnly cookies.")
+    Container(web_ui, "Compliance Portal", "React SPA", "Role-based report viewer and audit trail interface.")
+    Container(report_svc, "Report Service", "Java / Spring Boot (Hexagonal)", "Core domain: report generation, scheduling and delivery. Ports: ReportPort, AuditPort.")
+    Container(audit_svc, "Audit Service", "Go", "Immutable audit trail. Append-only event store.")
+    ContainerDb(report_db, "Report Store", "PostgreSQL", "Stores generated reports. Row-level security by role.")
+    ContainerDb(audit_db, "Audit Event Store", "PostgreSQL (append-only)", "Immutable log of all report access and state changes.")
+    Container(id_provider, "Identity Provider", "Keycloak (OIDC)", "Issues JWT tokens. Defines roles: AUDITOR, OFFICER, ADMIN.")
+    Container(ai_summarizer, "AI Summarizer", "Python / FastAPI", "Generates natural-language summaries of compliance reports using LLM.")
+  }
+
+  System_Ext(core_banking, "Core Banking System", "Source of financial transaction data (external)")
+  System_Ext(regulator_api, "Regulator API", "Receives official compliance report submissions (external)")
+
+  Rel(auditor, web_ui, "Views reports and audit trail", "HTTPS")
+  Rel(officer, web_ui, "Generates reports", "HTTPS")
+  Rel(web_ui, web_bff, "API calls", "HTTPS / REST")
+  Rel(web_bff, id_provider, "Validates session / exchanges tokens", "OIDC / PKCE")
+  Rel(web_bff, report_svc, "Requests reports", "REST (mTLS)")
+  Rel(report_svc, report_db, "Reads / writes reports", "SQL")
+  Rel(report_svc, audit_svc, "Emits audit events", "Async / Domain Events")
+  Rel(report_svc, ai_summarizer, "Requests AI summary", "REST (internal)")
+  Rel(report_svc, core_banking, "Fetches transaction data", "REST (external, secured)")
+  Rel(report_svc, regulator_api, "Submits official reports", "HTTPS (external)")
+  Rel(audit_svc, audit_db, "Appends events", "SQL")
+            </pre>
+          </div>
+        </div>
+
+        <!-- ADRs -->
+        <div class="animate-on-scroll delay-3" style="margin-bottom: var(--space-8);" id="case-adrs">
+          <h3 class="case-card__title" style="margin-bottom: var(--space-6);" data-i18n="case.adrs.title">Architecture
+            Decision Records</h3>
+          <div class="adr-list" id="adr-list-container">
+            <!-- ADR-001 -->
+            <details class="adr-card" id="adr-001">
+              <summary class="adr-card__summary">
+                <span class="badge badge--surface adr-card__id">ADR-001</span>
+                <span class="adr-card__title" data-i18n-adr="0.title">Hexagonal Architecture as structural
+                  pattern</span>
+                <span class="badge badge--success adr-card__status" data-i18n-adr="0.status">Accepted</span>
+                <svg class="adr-card__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </summary>
+              <div class="adr-card__body">
+                <div class="adr-card__row">
+                  <span class="adr-card__row-label font-mono text-xs uppercase ls-widest text-muted">Context</span>
+                  <p data-i18n-adr="0.context">Domain logic was bleeding into infrastructure layers (DB queries in
+                    controllers, framework coupling in business rules).</p>
+                </div>
+                <div class="adr-card__row">
+                  <span class="adr-card__row-label font-mono text-xs uppercase ls-widest text-muted">Decision</span>
+                  <p data-i18n-adr="0.decision">Adopt Ports &amp; Adapters to isolate domain from infrastructure. All
+                    external dependencies communicate through defined interfaces.</p>
+                </div>
+                <div class="adr-card__row">
+                  <span class="adr-card__row-label font-mono text-xs uppercase ls-widest text-muted">Consequences</span>
+                  <p data-i18n-adr="0.consequences">Higher initial complexity; decoupled domain enables independent
+                    testing and future adapter swaps without domain changes.</p>
+                </div>
+              </div>
+            </details>
+
+            <!-- ADR-002 -->
+            <details class="adr-card" id="adr-002">
+              <summary class="adr-card__summary">
+                <span class="badge badge--surface adr-card__id">ADR-002</span>
+                <span class="adr-card__title" data-i18n-adr="1.title">BFF pattern for web and mobile API surfaces</span>
+                <span class="badge badge--success adr-card__status" data-i18n-adr="1.status">Accepted</span>
+                <svg class="adr-card__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </summary>
+              <div class="adr-card__body">
+                <div class="adr-card__row">
+                  <span class="adr-card__row-label font-mono text-xs uppercase ls-widest text-muted">Context</span>
+                  <p data-i18n-adr="1.context">A single generic API was being consumed by both the compliance web portal
+                    and a mobile app, leading to over-fetching and fragile versioning.</p>
+                </div>
+                <div class="adr-card__row">
+                  <span class="adr-card__row-label font-mono text-xs uppercase ls-widest text-muted">Decision</span>
+                  <p data-i18n-adr="1.decision">Introduce a Backend-for-Frontend layer per client type. Each BFF owns
+                    its aggregation logic and data contract.</p>
+                </div>
+                <div class="adr-card__row">
+                  <span class="adr-card__row-label font-mono text-xs uppercase ls-widest text-muted">Consequences</span>
+                  <p data-i18n-adr="1.consequences">Increases deployment units; removes shared-API coupling and allows
+                    independent evolution of each client experience.</p>
+                </div>
+              </div>
+            </details>
+
+            <!-- ADR-003 -->
+            <details class="adr-card" id="adr-003">
+              <summary class="adr-card__summary">
+                <span class="badge badge--surface adr-card__id">ADR-003</span>
+                <span class="adr-card__title" data-i18n-adr="2.title">OIDC/PKCE with BFF session management</span>
+                <span class="badge badge--success adr-card__status" data-i18n-adr="2.status">Accepted</span>
+                <svg class="adr-card__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </summary>
+              <div class="adr-card__body">
+                <div class="adr-card__row">
+                  <span class="adr-card__row-label font-mono text-xs uppercase ls-widest text-muted">Context</span>
+                  <p data-i18n-adr="2.context">Sensitive financial reports required identity-aware access control.
+                    Storing tokens in the browser posed XSS risk.</p>
+                </div>
+                <div class="adr-card__row">
+                  <span class="adr-card__row-label font-mono text-xs uppercase ls-widest text-muted">Decision</span>
+                  <p data-i18n-adr="2.decision">Use OIDC Authorization Code + PKCE flow with token storage in BFF
+                    session (HttpOnly cookies). Browser never holds tokens.</p>
+                </div>
+                <div class="adr-card__row">
+                  <span class="adr-card__row-label font-mono text-xs uppercase ls-widest text-muted">Consequences</span>
+                  <p data-i18n-adr="2.consequences">Adds BFF complexity; eliminates token theft attack surface from
+                    browser-side JS.</p>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <!-- Fitness Functions -->
+        <div class="animate-on-scroll delay-4" id="case-fitness">
+          <h3 class="case-card__title" style="margin-bottom: var(--space-6);" data-i18n="case.fitness.title">Fitness
+            Functions</h3>
+          <div class="fitness-table-wrapper">
+            <table class="fitness-table" aria-label="Architecture Fitness Functions">
+              <thead>
+                <tr>
+                  <th data-i18n-ff="col.0">Function</th>
+                  <th data-i18n-ff="col.1">Threshold</th>
+                  <th data-i18n-ff="col.2">Trigger</th>
+                  <th data-i18n-ff="col.3">Status</th>
+                </tr>
+              </thead>
+              <tbody id="fitness-table-body">
+                <tr>
+                  <td>p95 report generation latency</td>
+                  <td class="font-mono text-sm">&lt; 800 ms</td>
+                  <td class="text-muted text-sm">CI pipeline · k6 load test</td>
+                  <td><span class="badge badge--success">PASS</span></td>
+                </tr>
+                <tr>
+                  <td>ArchUnit: no domain → infra coupling</td>
+                  <td class="font-mono text-sm">Zero violations</td>
+                  <td class="text-muted text-sm">CI pipeline · ArchUnit</td>
+                  <td><span class="badge badge--success">PASS</span></td>
+                </tr>
+                <tr>
+                  <td>OWASP Dependency-Check</td>
+                  <td class="font-mono text-sm">No CRITICAL CVEs</td>
+                  <td class="text-muted text-sm">Nightly scan</td>
+                  <td><span class="badge badge--success">PASS</span></td>
+                </tr>
+                <tr>
+                  <td>Report delivery SLO</td>
+                  <td class="font-mono text-sm">&gt; 99.5 % success rate</td>
+                  <td class="text-muted text-sm">Synthetic monitor · 5 min</td>
+                  <td><span class="badge badge--surface text-muted">PLACEHOLDER</span></td>
+                </tr>
+                <tr>
+                  <td>Cross-module fan-out</td>
+                  <td class="font-mono text-sm">≤ 3 outbound deps/module</td>
+                  <td class="text-muted text-sm">CI pipeline · custom</td>
+                  <td><span class="badge badge--surface text-muted">PLACEHOLDER</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="placeholder" style="margin-top: var(--space-4);" data-i18n="case.fitness.placeholder">
+            PLACEHOLDER — Remaining fitness functions to be documented with production metrics.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================================================
+         SECTION 4: STACK & EXPERIENCE
+    =================================================== -->
+    <section id="stack" class="section" aria-labelledby="stack-heading">
+      <div class="container">
+
+        <header class="section-header animate-on-scroll">
+          <p class="section-header__label" data-i18n="stack.label">Stack &amp; Experience</p>
+          <h2 class="section-header__title" id="stack-heading" data-i18n="stack.title">Technical Depth Across the Full
+            Architecture Stack</h2>
+          <p class="section-header__subtitle" data-i18n="stack.subtitle">
+            Eight years building and reviewing systems in regulated financial environments across LATAM.
+          </p>
+        </header>
+
+        <div class="stack-grid animate-on-scroll delay-1">
+
+          <!-- Architecture -->
+          <div class="card stack-group" id="stack-architecture">
+            <h3 class="stack-group__label" data-i18n="stack.groups.architecture.label">Architecture</h3>
+            <ul class="stack-pills" role="list" id="stack-arch-list">
+              <li class="badge badge--surface">Hexagonal / Ports &amp; Adapters</li>
+              <li class="badge badge--surface">Domain-Driven Design</li>
+              <li class="badge badge--surface">Microservices</li>
+              <li class="badge badge--surface">Event-Driven Architecture</li>
+              <li class="badge badge--surface">API Design (REST · GraphQL · AsyncAPI)</li>
+              <li class="badge badge--surface">Architecture Decision Records</li>
+            </ul>
+          </div>
+
+          <!-- Security -->
+          <div class="card stack-group" id="stack-security">
+            <h3 class="stack-group__label" data-i18n="stack.groups.security.label">Security</h3>
+            <ul class="stack-pills" role="list" id="stack-security-list">
+              <li class="badge badge--surface">OIDC / OAuth 2.0</li>
+              <li class="badge badge--surface">PKCE · BFF Pattern</li>
+              <li class="badge badge--surface">mTLS · Service Mesh</li>
+              <li class="badge badge--surface">Secrets Management</li>
+              <li class="badge badge--surface">SAST / DAST Integration</li>
+              <li class="badge badge--surface">SCA &amp; CVE Scanning</li>
+            </ul>
+          </div>
+
+          <!-- Cloud -->
+          <div class="card stack-group" id="stack-cloud">
+            <h3 class="stack-group__label" data-i18n="stack.groups.cloud.label">Cloud &amp; Infrastructure</h3>
+            <ul class="stack-pills" role="list" id="stack-cloud-list">
+              <li class="badge badge--accent">GCP · Professional Cloud Architect ✓</li>
+              <li class="badge badge--surface">AWS · Multi-Account Strategy</li>
+              <li class="badge badge--surface">Terraform · IaC</li>
+              <li class="badge badge--surface">Kubernetes · GKE · EKS</li>
+              <li class="badge badge--surface">Multi-Cloud Networking (VPN · BGP)</li>
+              <li class="badge badge--surface">Cloud Cost Governance</li>
+            </ul>
+          </div>
+
+          <!-- CI/CD -->
+          <div class="card stack-group" id="stack-cicd">
+            <h3 class="stack-group__label" data-i18n="stack.groups.cicd.label">CI/CD &amp; Governance</h3>
+            <ul class="stack-pills" role="list" id="stack-cicd-list">
+              <li class="badge badge--surface">GitHub Actions · GitLab CI</li>
+              <li class="badge badge--surface">ArgoCD · GitOps</li>
+              <li class="badge badge--surface">Policy-as-Code (OPA)</li>
+              <li class="badge badge--surface">ArchUnit · Fitness Functions</li>
+              <li class="badge badge--surface">SLO / SLA Definition</li>
+              <li class="badge badge--surface">Incident Runbooks</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- GCP Certification highlight -->
+        <div class="gcp-cert-card animate-on-scroll delay-2" id="gcp-cert">
+          <div class="gcp-cert-card__icon" aria-hidden="true">
+            <!-- GCP-style hexagon badge SVG -->
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="var(--color-accent-muted)"
+                stroke="var(--color-accent)" stroke-width="1.5" />
+              <text x="24" y="30" font-family="monospace" font-size="11" font-weight="bold" fill="var(--color-accent)"
+                text-anchor="middle">GCP</text>
+            </svg>
+          </div>
+          <div class="gcp-cert-card__text">
+            <strong class="gcp-cert-card__title" data-i18n="stack.cert.title">Google Cloud Certified</strong>
+            <span class="gcp-cert-card__sub text-secondary" data-i18n="stack.cert.sub">Professional Cloud
+              Architect</span>
+            <span class="gcp-cert-card__note text-muted text-xs font-mono" data-i18n="stack.cert.note">Issued by Google
+              Cloud</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================================================
+         SECTION 5: CONTACT
+    =================================================== -->
+    <section id="contact" class="section section--alt" aria-labelledby="contact-heading">
+      <div class="container">
+
+        <header class="section-header animate-on-scroll">
+          <p class="section-header__label" data-i18n="contact.label">Contact</p>
+          <h2 class="section-header__title" id="contact-heading" data-i18n="contact.title">Let's talk architecture.</h2>
+          <p class="section-header__subtitle" data-i18n="contact.subtitle">
+            Whether you're planning a modernization, facing a production risk, or need a second opinion on a design
+            decision — I'm available for a focused conversation.
+          </p>
+        </header>
+
+        <div class="contact-grid animate-on-scroll delay-1">
+
+          <!-- Email CTA card -->
+          <div class="card card--elevated contact-cta-card">
+            <a href="mailto:cdrobayom@gmail.com" class="btn btn--primary btn--lg" id="contact-email-btn"
+              data-i18n="contact.cta">
+              Send me a message
+            </a>
+            <p class="services-nda text-muted text-xs" style="margin-top: var(--space-4);" data-i18n="contact.nda">
+              Happy to sign an NDA before any technical discussion.
+            </p>
+          </div>
+
+          <!-- Channel links -->
+          <div class="contact-channels">
+
+            <a href="https://www.linkedin.com/in/carlos-david-r-075818157" target="_blank" rel="noopener noreferrer"
+              class="contact-channel" id="contact-linkedin" aria-label="Connect on LinkedIn">
+              <div class="contact-channel__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </div>
+              <span class="contact-channel__label" data-i18n="contact.channels.linkedin">Connect on LinkedIn</span>
+              <svg class="contact-channel__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+
+            <a href="https://github.com/cdrobayom" target="_blank" rel="noopener noreferrer" class="contact-channel"
+              id="contact-github" aria-label="See my GitHub profile">
+              <div class="contact-channel__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                </svg>
+              </div>
+              <span class="contact-channel__label" data-i18n="contact.channels.github">See my GitHub</span>
+              <svg class="contact-channel__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+
+            <a href="mailto:cdrobayom@gmail.com" class="contact-channel" id="contact-email" aria-label="Send an email">
+              <div class="contact-channel__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </div>
+              <span class="contact-channel__label" data-i18n="contact.channels.email">Email directly</span>
+              <svg class="contact-channel__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================
+       FOOTER
+  ======================================================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container site-footer__inner">
+      <div class="site-footer__left">
+        <a href="#hero" class="nav__logo site-footer__logo" aria-label="Back to top">
+          <span class="nav__logo-accent">CDR</span>
+          <span>Software Arch</span>
+        </a>
+        <p class="font-mono text-xs text-muted" data-i18n="footer.disclaimer">
+          All case studies use fictitious client names. No current employer data is referenced.
+        </p>
+      </div>
+      <div class="site-footer__right">
+        <p class="font-mono text-xs text-muted" data-i18n="footer.copy">© 2025 CDR Software Arch. David Robayo.</p>
+        <p class="font-mono text-xs text-muted" data-i18n="footer.craft">Built with craft, not templates.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================
+       SCRIPTS — i18n first, then app
+  ======================================================= -->
+  <script src="./js/i18n.js"></script>
+  <script src="./js/app.js" defer></script>
+
+  <!-- Mermaid for C4 diagrams (loaded async) -->
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        background: '#141619',
+        primaryColor: '#1C1F23',
+        primaryBorderColor: '#D4A346',
+        primaryTextColor: '#F2EFE9',
+        lineColor: '#525866',
+        edgeLabelBackground: '#141619',
+        fontFamily: 'Inter, system-ui, sans-serif',
+        fontSize: '13px',
+      },
+      c4: { diagramMarginX: 24, diagramMarginY: 24 },
+    });
+  </script>
+
+</body>
+
+</html>
